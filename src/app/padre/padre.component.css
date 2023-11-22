@@ -1,0 +1,128 @@
+.main{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+}
+
+.overflow{
+    height: 50%;
+    width: 80%;
+    max-height: 50%;
+    max-width: 80%;
+    overflow-y: scroll;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead{
+    background-color: #f5f5f5;
+}
+
+th, td{
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+th{
+    text-align: left;
+}
+
+tr:nth-child(even){
+    background-color: #c2c2c2;
+}
+
+.btnContainer{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btnContainer > button{
+    width: 20%;
+    height: 50%;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 3px;
+    background-color: #f5f5f5;
+}
+
+.active{
+    display: flex;
+}
+
+.inactive{
+    display: none;
+}
+
+.fog{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 2;
+}
+
+.modal{
+    position: relative;
+    top: 10%;
+    left: 25%;
+    width: 50%;
+    height: 75%;
+    padding: 10px;
+    border: 2px solid black;
+    background-color: white;
+    color: black;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+}
+
+.modal-content{
+    width: 90%;
+    height: 75%;
+    border: 2px solid black;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.modal-content > input{
+    width: 80%;
+    height: 5%;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.modalButton > button{
+    width: 30%;
+    height: 50%;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 3px;
+    background-color: #f5f5f5;
+}
+
+.modalButton{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    height: 25%;
+    justify-content: space-around;
+}

@@ -1,0 +1,46 @@
+<div class="main">
+    <div class="overflow">
+        <table>
+            <thead>
+                <tr>
+                    <th>città</th>
+                    <th>località</th>
+                    <th>pop</th>
+                    <th>stato</th>
+                    <th>id</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of data">
+                    <td>{{item.city}}</td>
+                    <td>
+                        <p *ngFor="let loc of item.loc">{{loc}}</p>
+                    </td>
+                    <td>{{item.pop}}</td>
+                    <td>{{item.state}}</td>
+                    <td>{{item._id}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="btnContainer">
+        <button (click)="open()" class="btn">aggiungi</button>
+    </div>
+
+    <div class="fog inactive">
+        <div class="modal">
+            <div class="modal-content">
+                <p>inserisci un nuovo zipCode</p>
+                citta <input type="text" [(ngModel)]="citta" />
+                localita <input type="text" [(ngModel)]="localita" />
+                pop <input type="text" [(ngModel)]="pop" />
+                stato <input type="text" [(ngModel)]="stato" />
+                <div class="modalButton">
+                    <button (click)="add()">aggiungi</button>
+                    <button (click)="close()" id="btnClose">chiudi</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
